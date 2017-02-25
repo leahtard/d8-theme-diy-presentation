@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('museo-sans-100.eot');
+  src: url('museo-sans-100.eot') format('embedded-opentype'),
+       url('museo-sans-100.woff') format('woff'),
+       url('museo-sans-100.ttf') format('truetype'),
+       url('museo-sans-100.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

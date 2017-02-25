@@ -1,0 +1,308 @@
+/**
+ * Quirky theme for reveal.js presentations
+ *
+ * This theme is Copyright (C) 2017 The Jibe, https://thejibe.com. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/museo-sans/museo-sans.css);
+@import url(../../lib/font/fontawesome/fontawesome.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700,700italic);
+
+// Brand Colours
+$green: #94b900;
+$ofWhite: #f0f0f0;
+$yellow: #e0a919;
+$purple: #9b64a7;
+$blue: #2d98b8;
+$red: #d6533a;
+$slate: #35454c;
+$brandColour: $green;
+
+$twitter: #1da1f2;
+$drupal: #0077c0;
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Open Sans', sans-serif;
+$mainColor: #000;
+$headingFont: 'Museo Sans', Impact, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: $brandColour;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+
+// RESETS
+.reveal {
+
+  h1 {
+    font-size: 3em !important;
+  }
+  h2 {
+    font-size: 1.8em !important;
+  }
+
+  ul, ol, dl {
+    margin-left: 1.3em !important;
+  }
+
+  pre {
+    width: 100% !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .slides {
+    font-weight: 300;
+    text-align: left;
+  }
+
+  section {
+    img {
+      background-color: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .controls {
+    bottom: 70px;
+  }
+
+  .progress {
+    background: #ccc !important;
+  }
+
+}
+
+// BASE
+small {
+  font-size: 0.6em !important;
+}
+
+strike {
+  opacity: 0.5;
+}
+
+// COMPONENTS
+
+// Section
+section {
+  &.section--dark-background {
+    &, h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+    a {
+      color: lighten( $linkColor, 20% );
+      &:hover {
+        color: lighten( $linkColor, 25% );
+      }
+    }
+  }
+
+  &.section--align-top {
+    top: 0 !important;
+  }
+
+  &.section--white-bg {
+    background: #fff;
+    border: solid 1px #ccc;
+    padding-top: 28px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  &.section--text-align-center {
+    text-align: center;
+  }
+
+}
+
+// Icons
+.icon {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+.icon--small {
+  font-size: 0.8em;
+}
+.icon--twitter {
+  color: $twitter;
+}
+.icon--drupal {
+  color: $drupal;
+}
+.icon--green {
+  color: $green;
+}
+.icon--red {
+  color: $red;
+}
+
+// Person
+.person__image {
+  width: 130px;
+  float: left;
+  display: inline-block;
+  padding-right: 20px !important;
+  img {
+    border-radius: 50%;
+    margin: 0 !important;
+  }
+}
+.person__bio {
+  width: calc(100% - 150px);
+  float: left;
+  display: inline-block;
+}
+ul.person__list {
+  margin-left: 1em !important;
+  li {
+    margin-bottom: 8px;
+    font-size: 0.7em;
+  }
+}
+
+// LAYOUT
+.layout--2-col {
+  > div {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.layout--2-col--60-40 {
+  > div {
+    display: inline-block;
+    float: left;
+    margin-right: 2%;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:first-child {
+      width: 57.25%;
+    }
+    &:last-child {
+      width: 40.75%;
+    }
+  }
+}
+
+.layout--2-col--40-60 {
+  > div {
+    display: inline-block;
+    float: left;
+    margin-right: 2%;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:first-child {
+      width: 40.75%;
+    }
+    &:last-child {
+      width: 57.25%;
+    }
+  }
+}
+
+footer.footer--branded {
+  position: absolute;
+  bottom: 3px;
+  background: #FFF;
+  z-index: 100;
+  width: 100%;
+  border-top: solid 1px #CCC;
+  font-size: 16px;
+
+  .footer__container {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .footer__logo {
+    max-height: 45px;
+  }
+
+  .footer__content {
+    flex: 1;
+    text-align: right;
+  }
+
+}
+
+// UTILITY
+
+// Code
+.col-title {
+  margin-bottom: 5px !important;
+  font-size: 0.5em !important;
+  font-weight: 600 !important;
+}
+
+.col-title--code {
+  margin-bottom: 5px !important;
+  font-size: 0.5em !important;
+  font-weight: 600 !important;
+  &:before {
+    content: ' ';
+    color: $green;
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-size: 1.2em;
+  }
+}
+
+.highlight-title {
+  background-color: #000;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  padding-bottom: 5px !important;
+  margin-left: -10px !important;
+  color: #FFF !important;
+}
+
+.highlight-title--blue {
+  background-color: $blue
+}
+
+.highlight-title--red {
+  background-color: $red
+}
+
+.highlight-title--yellow {
+  background-color: $yellow
+}
+
+.highlight-title--purple {
+  background-color: $purple
+}
+
+.highlight-title--green {
+  background-color: $green
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Drupal 8 Theming DIY | Presented by Leah Wagner</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/quirky.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,9 +24,830 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-background="lib/images/the-jibe-client-pattern.jpg" data-background-repeat="repeat" data-background-size="350px" class="section--text-align-center section--dark-background" data-transition="fade">
+					<h3><strong>Our awesome clients gave us really cool prizes to give away!</strong></h3>
+					<h6>Enter our raffle to win cool stuff from Grouse Mountain, Banyen Books, Fuud, Klei Entertainment, Six Cents Press and more!</h6>
+					<p><a href="http://promo.thejibe.com/pnwd2017/" style="color:#FFF"><strong>promo.thejibe.com/pnwd2017</strong></a></p>
+					<p>&nbsp;</p>
+				</section>
+
+				<section data-background="lib/images/the-jibe-toolbox-tile.png" data-background-repeat="repeat" data-background-size="350px" class="section--white-bg" data-transition="fade">
+					<h3>Drupal 8 Theming DIY</h3>
+					<h6>Creating a Slideshow and Content Tabs with Theme Libraries and Slick</h6>
+					<p>
+						<small style="line-height:32px;">by Leah Wagner&nbsp;&nbsp;//&nbsp;&nbsp;<a href="http://twitter.com/leahamwagner">@leahamwagner</a> <br> from The Jibe&nbsp;&nbsp;//&nbsp;&nbsp;<a href="http://twitter.com/thejibe">@thejibe</a></small>
+					</p>
+          <aside class="notes">
+						- We have about an hour
+						- Hoping to present in 40 - 45
+						- Finish with Q's and Discussion
+						- Start recording
+					</aside>
+				</section>
+
+				<section data-background="#f0f0f0" data-transition="fade" class="section--align-top">
+					<h3>Join us on <img src="lib/images/slack-logo.png" style="max-width:240px;position:relative;top:32px;"/></h3>
+					<small>
+	  			<p><strong>#1</strong> Get access: <a href="https://pnwds-slack.herokuapp.com/">https://pnwds-slack.herokuapp.com/</a></p>
+	  			<p><strong>#2</strong> Download an app or visit <a href="https://pnwds.slack.com/">https://pnwds.slack.com/</a></p>
+	  			<p><strong>#3</strong> Join a session<br><img style="margin:20px 0 0 0;" src="lib/images/pnwds-session-slack-link-teaser.png"/></p>
+	  			<p><strong>#4</strong> We are here: <a href="slack://channel?team=T3G3AAL8N&id=C40P99QTV">slack://channel?team=T3G3AAL8N&id=C40P99QTV</a></p>
+	  		  </small>
+          <aside class="notes">
+						- If you didn't already know join this session on Slack
+						- If you have any post-talk questions, just reach out!
+					</aside>
+				</section>
+
+	      <section class="section--dark-background" data-background="#35454c" data-transition="fade">
+					<section class="section--dark-background" data-background="#35454c" data-transition="fade">
+						<div class="person">
+							<div class="person__image"><img src="lib/images/leah-wagner.jpg"/></div>
+							<div class="person__bio">
+								<h6 style="margin-bottom:5px;">Hi, I'm Leah!</h6>
+								<p style="margin:0px;"><small><i class="icon"></i> @leahamwagner&nbsp;&nbsp;//&nbsp;&nbsp;<i class="icon"></i> leahtard</small></p>
+								<ul class="person__list">
+									<li>Front-end and Drupal developer at <a href="https://thejibe.com/">The Jibe</a> in Vancouver, BC.</li>
+									<li>Co-maintainer for the <a href="https://www.drupal.org/project/basic">Basic</a> starter theme.</li>
+									<li>Member of the <a href="http://pnwdrupalsummit.org/2017">PNW Drupal Summit</a> planning committee.</li>
+									<li>I <i class="icon icon--green icon--small"></i> clean markup, componentizing design, modular code,<br>witbeir, red wine, running and rock &amp; roll.<br>&nbsp;</li>
+								</ul>
+							</div>
+							<div class="person__content"></div>
+						</div>
+					</section>
+
+					<section class="section--dark-background" data-background="#35454c" data-transition="fade">
+						<div class="person">
+							<div class="person__image"><img src="lib/images/leah-wagner.jpg"/></div>
+							<div class="person__bio">
+								<h6 style="margin-bottom:5px;">Hi, I'm Leah!</h6>
+								<p style="margin:0px;"><small><i class="icon"></i> @leahamwagner&nbsp;&nbsp;//&nbsp;&nbsp;<i class="icon"></i> leahtard</small></p>
+								<ul class="person__list">
+									<li>Front-end and Drupal developer at <a href="https://thejibe.com/">The Jibe</a> in Vancouver, BC.</li>
+									<li>Co-maintainer for the <a href="https://www.drupal.org/project/basic">Basic</a> starter theme.</li>
+									<li>Member of the <a href="http://pnwdrupalsummit.org/2017">PNW Drupal Summit</a> planning committee.</li>
+									<li>I <i class="icon icon--green icon--small"></i> clean markup, componentizing design, modular code,<br> <strike>witbeir, red wine, running</strike> and rock &amp; roll.<br><em>ice cream, pickles, prenatal yoga</em></li>
+								</ul>
+							</div>
+							<div class="person__content"></div>
+		          <aside class="notes">
+								- Like to keep the pres casual
+								- Please ask Q's
+								- Offer additional insights
+								- I'll do my best to monitor slack at the same time.
+							</aside>
+						</div>
+					</section>
+
+			  </section>
+
+				<section data-transition="fade">
+					<section data-background="#f0f0f0" data-transition="fade">
+						<h5 style="margin-bottom: 10px;">Drupal 8 Theming DIY</h5>
+						<h2 class="highlight-title highlight-title--yellow">The Context</h2>
+						<p>&nbsp;</p>
+	          <aside class="notes">
+							- Dive into D8 Slideshows and Content tabs
+							- My greatest learnings from challenges in project work
+							- That is the context/perspective I will share
+						</aside>
+					</section>
+
+					<section data-background="lib/images/scanse-home-hero.jpg" data-transition="fade">
+						<p><br><br><br><br><br><br><br><br><br><br><br><small>visit at: <a style="color:#F0534A;" href="https://scanse.io/">scanse.io</a></small></p>
+						<aside class="notes">
+							- Scanse came to us in early 2016. Success Kickstarter.
+							- Already new Drupal was the technology (Existing static site)
+							- Early 2016, D8 few months old.
+						</aside>
+					</section>
+
+					<section data-background-video="lib/images/scanse-video-tour.m4v" data-transition="fade">
+						<aside class="notes">
+							- After wireframing and design. Assess D7 or D8.
+							- Given row-based design, using Paragraphs, avail D7 &amp; D8
+							- Contib nothing for slideshow &amp; content tabs, working alongside the use of the Paragraphs module
+							- Where did we land?
+						</aside>
+					</section>
+
+				  <section class="section--text-align-center section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<img src="lib/images/drupal8-white.png">
+						<aside class="notes">
+							- Drupal 8!
+							- Why weren't we concerned about underdeveloped contrib?
+						</aside>
+				  </section>
+
+				  <section class="section--text-align-center section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<img src="lib/images/drupal8-white.png" style="max-width:220px;margin-top:-70px;margin-bottom:-5px;">
+				  	<h1>+<br>Theme Libraries</h1>
+						<aside class="notes">
+							- Theme Libraries!
+						</aside>
+				  </section>
+
+			  </section>
+
+			  <section data-background='#2d98b8' data-transition="fade">
+
+					<section data-background="#f0f0f0" data-transition="fade">
+						<h5 style="margin-bottom: 10px;">Drupal 8 Theming DIY</h5>
+						<h2 class="highlight-title highlight-title--blue">Theme Libraries</h2>
+						<p>&nbsp;</p>
+	          <aside class="notes">
+	          	- What are theme libraries?
+							- Conceptually similar D7 Libraries: compartmentalized code available for reuse
+							- D8 Theme Libraries: define groupings of CSS and JS
+							- Ref Basic for simple example
+							- Wondering... But why? Not alone.
+						</aside>
+					</section>
+
+				  <section class="section--text-align-center section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<h4><i class="icon"></i> As the front-end community (not just the front-end Drupal community) moves towards Modular CSS implementations (SMACSS, OOCSS, etc) and online style guides, I see this as a hindrance or irrelevant to this production workflow. <i class="icon"></i></h4>
+				  	<p class="fragment"><small>leahtard // <a href="https://www.drupal.org/node/2377397#comment-9360665">https://www.drupal.org/node/2377397</a></small></p>
+						<aside class="notes">
+							- However, today I can say...
+						</aside>
+				  </section>
+
+				  <section class="section--text-align-center section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<h1 style="margin-top:-70px;">I <i class="icon icon--red"></i></h1>
+				  	<h1>Theme Libraries</h1>
+						<aside class="notes">
+							- So stay with me...
+							- Before slideshow, need a theme library crash course
+							- Tomorrow session, intro to D8 theming
+							- Articles at the end
+						</aside>
+				  </section>
+
+				  <section class="section--align-top section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<h2>Theme Libraries 101</h2>
+				  	<p>Created through the theme’s yml files</p>
+				  	<p class="col-title--code">THEME.info.yml</p>
+						<div data-markdown>
+```
+name: Theme Name
+type: theme
+core: 8.x
+
+# Regions
+regions:
+  header: Header
+  content: Content
+
+# Scripts & Styles
+libraries:
+  - THEME/global
+```
+						</div>
+				  	<p><small><em>Note: All references to THEME would be replaced by your theme name.</em></small></p>
+						<aside class="notes">
+							- Global theme library will be loaded globally.
+							- Namespace your control.
+							- Because this library is being included in THEME.info.yml
+							- But no CSS is defined here.
+							- Further definition in THEME.libraries.yml.
+						</aside>
+				  </section>
+
+				  <section class="section--align-top section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<h2>Theme Libraries 101</h2>
+				  	<p>Further definition of CSS and JS required</p>
+				  	<p class="col-title--code">THEME.libraries.yml</p>
+				  	<div class="layout--2-col">
+				  		<div>
+							  <div data-markdown>
+```
+global:
+  version: VERSION
+  css:
+    base:
+      css/base/base.css: {}
+    layout:
+      css/layout/layout.css: {}
+    component:
+      css/components/components.css: {}
+  js:
+    js/modernizr.js: {}
+```
+							  </div>
+							  <p class="fragment"><small><em>continued in right column</em> <i class="icon"></i></small></p>
+						  </div>
+						  <div class="fragment">
+  						  <div data-markdown>
+```
+slick:
+  version: VERSION
+  css:
+    component:
+      css/components/slick.css: {}
+  js:
+    js/slick.min.js: {}
+    js/slick.config.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+```
+								</div>
+						  </div>
+					  </div>
+						<aside class="notes">
+							- Here we define our CSS/JS.
+							- What you did in a single D7 THEME.info file, you now do in two D8 theme yml files.
+							- Define another library, slick
+							- Dependencies, JQuery not loaded globally
+							- Simply adding this here will not load it anywhere
+							- We will come back to how this is used...
+						</aside>
+				  </section>
+
+				  <section class="section--text-align-center section--dark-background" data-background='#2d98b8' data-transition="fade">
+				  	<img src="lib/images/drupal8-white.png" style="max-width:220px;margin-top:-70px;margin-bottom:-5px;">
+				  	<h1>vs.<br>Drupal 7</h1>
+						<aside class="notes">
+							- Touch base on D7 approach
+							- Require a custom module
+							- Use a hook like hook_node_view_alter
+							- Big win for D8. Before documented.
+							- Questions...
+						</aside>
+				  </section>
+
+			  </section>
+
+				<section data-transition="fade">
+					<section data-background="#f0f0f0" data-transition="fade">
+						<h5 style="margin-bottom:10px;">Drupal 8 Theming DIY</h5>
+						<h2 class="highlight-title highlight-title--red">Creating a Slideshow</h2>
+						<p>&nbsp;</p>
+	          <aside class="notes">
+							- Many traditional options to creating a slideshow
+							- Views slideshow JQuery cycle
+							- Flexslider
+							- Bxslider
+							- My current favourite...
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2 style="margin-bottom:0px;">What is Slick?</h2>
+						<p style="margin-bottom:45px;margin-top:0;"><em>the last carousel you'll ever need</em></p>
+				  	<div class="layout--2-col">
+				  		<div class="fragment">
+				  			<ul>
+				  				<li>Fully responsive</li>
+				  				<li>Settings by breakpoint</li>
+				  				<li>Swipe enabled</li>
+				  				<li>Centre focus display</li>
+				  				<li>Autoplay, dots, arrows, callbacks, etc...</li>
+				  			</ul>
+				  			<p><small>Learn more: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></small></p>
+				  		</div>
+				  		<div class="fragment">
+							  <div data-markdown>
+<script type="text/template">
+```js
+$('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+```
+</script>
+							  </div>
+							</div>
+						</div>
+						<aside class="notes">
+							- Humbly dubbed...
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>The Design</h2>
+				  	<div class="layout--2-col--60-40">
+				  		<div>
+				  			<p class="col-title">Desktop display</p>
+				  			<img src="lib/images/scanse-slideshow-desktop.jpg"/>
+				  		</div>
+				  		<div>
+				  			<p class="col-title">Mobile display</p>
+				  			<img src="lib/images/scanse-slideshow-mobile.jpg"/>
+				  		</div>
+				  	</div>
+						<aside class="notes">
+							- You may have caught a glimpse in the video...
+							- Centre focus display
+						</aside>
+				  </section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>The HTML Markup</h2>
+						<p>First, configure Drupal to render your content. Views? Paragraphs? Here, the how doesn't matter.</p>
+						<div data-markdown>
+<script type="text/template">
+```html
+<div class="slideshow">
+
+  <h2 class="slideshow__title">What is Sweep?</h2>
+  <p class="slideshow__body">Sweep is a scanning LiDAR sensor designed to bring powerful 360 degree sensing capabilities to everyone for an affordable price.</p>
+
+  <ul class="slideshow__slides">
+    <li class="slideshow__slide-item"><iframe src="#"></iframe></li>
+    <li class="slideshow__slide-item"><iframe src="#"></iframe></li>
+    <li class="slideshow__slide-item"><iframe src="#"></iframe></li>
+  </ul>
+
+</div>
+```
+</script>
+						</div>
+						<aside class="notes">
+							- This is the markup nerd in me.
+							- Outside the context of tech.
+							- We used the Paragraphs module – but we won’t dive too deeply into that implementation here. We also could have used a view or a multi-value field to achieve the same thing.
+							- In the end, we want our markup to look something like this.
+							- Twig makes this so nice...
+						</aside>
+				  </section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>Create a Theme Library</h2>
+				  	<p>Back to the theme library...</p>
+				  	<p class="col-title--code">THEME.libraries.yml</p>
+				  	<div class="layout--2-col">
+				  		<div>
+							  <div data-markdown>
+```
+global:
+  version: VERSION
+  css:
+    base:
+      css/base/base.css: {}
+    layout:
+      css/layout/layout.css: {}
+    component:
+      css/components/components.css: {}
+  js:
+    js/modernizr.js: {}
+```
+							  </div>
+							  <p><small><em>continued in right column</em> <i class="icon"></i></small></p>
+						  </div>
+						  <div>
+  						  <div data-markdown>
+```
+slick:
+  version: VERSION
+  css:
+    component:
+      css/components/slick.css: {}
+  js:
+    js/slick.min.js: {}
+    js/slick.config.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+```
+								</div>
+						  </div>
+					  </div>
+						<aside class="notes">
+							- When creating a theme library, we are responsible for downloading assets.
+							- Because slick requires JQuery, we also add that as a dependency.
+							- One file left to review: slick.config.js
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>Configure Slideshow</h2>
+				  	<p class="col-title--code">slick.config.js</p>
+  					<div data-markdown>
+<script type="text/template">
+```js
+(function ($, Drupal, window, document) {
+
+  Drupal.behaviors.THEMESlickConfig = {
+    attach: function (context, settings) {
+
+      $(".js-slick-single-item-center").slick({
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: '460px',
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        responsive: [
+          {
+            breakpoint: 1600,
+            settings: {
+              centerPadding: '300px',
+            }
+          },
+          {
+            breakpoint: 960,
+            settings: {
+              adaptiveHeight: true,
+              centerPadding: '100px',
+            }
+          },
+        ]
+      });
+
+    }
+  };
+
+} (jQuery, Drupal, this, this.document));
+```
+</script>
+						</div>
+						<aside class="notes">
+							- Take note of the special js- class
+							- We do this to keep our functionality and styling separate
+						</aside>
+				  </section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>Bringing it together</h2>
+						<p>Step 1: Starting with a Twig template</p>
+						<p class="col-title--code">field--field-slideshow-slides.twig.html</p>
+						<div data-markdown>
+<script type="text/template">
+```html
+{% set classes = [
+  'slideshow__slides'
+] %}
+
+<ul {{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    <li{{ item.attributes }}>{{ item.content }}</li>
+  {% endfor %}
+</ul>
+```
+</script>
+						</div>
+						<aside class="notes">
+							- We have our markup
+							- We have our library define... but it is not loading yet
+							- Bring this together in our Twig template
+							- Here is an example template that would create the markup we first showed
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>Bringing it together</h2>
+						<p>Step 2: Attaching the theme library</p>
+						<p class="col-title--code">field--field-slideshow-slides.twig.html</p>
+						<div data-markdown>
+<script type="text/template">
+```html
+{% set classes = [
+  'slideshow__slides'
+] %}
+
+{{ attach_library('THEME/slick') }}
+
+<ul {{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    <li{{ item.attributes }}>{{ item.content }}</li>
+  {% endfor %}
+</ul>
+```
+</script>
+						</div>
+						<aside class="notes">
+							- This says, load the defined library when this template is rendered
+							- As a result, the JS and CSS will be available.
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#d6533a" data-transition="fade">
+						<h2>Bringing it together</h2>
+						<p>Step 3: Add the JS class our config defines</p>
+						<p class="col-title--code">field--field-slideshow-slides.twig.html</p>
+						<div data-markdown>
+<script type="text/template">
+```html
+{% set classes = [
+  'slideshow__slides',
+  'js-slick-single-item-center'
+] %}
+
+{{ attach_library('THEME/slick') }}
+
+<ul {{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    <li{{ item.attributes }}>{{ item.content }}</li>
+  {% endfor %}
+</ul>
+```
+</script>
+						</div>
+						<aside class="notes">
+							- Add the JS class
+							- Questions? Comments?
+							- If you need a bit more time to process, that's okay, we are going to go through that again, for a slightly different use case.
+						</aside>
+					</section>
+
+				</section>
+
+
+			  <section data-transition="fade">
+
+					<section data-background="#f0f0f0" data-transition="fade">
+						<h5 style="margin-bottom:10px;">Drupal 8 Theming DIY</h5>
+						<h2 class="highlight-title highlight-title--purple">Creating Content Tabs</h2>
+						<p>&nbsp;</p>
+						<aside class="notes">
+							- In D7, we could use the quicktabs module
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#9b64a7" data-transition="fade">
+						<h2>The Design</h2>
+				  	<div class="layout--2-col--60-40">
+				  		<div>
+				  			<p class="col-title">Desktop display</p>
+				  			<img src="lib/images/scanse-tabs-desktop.jpg"/>
+				  		</div>
+				  		<div>
+				  			<p class="col-title">Mobile display</p>
+				  			<img src="lib/images/scanse-tabs-mobile.jpg"/>
+				  		</div>
+				  	</div>
+						<aside class="notes">
+							- Click on tab titles, get an ajax refresh.
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#9b64a7" data-transition="fade">
+						<h2>What JS library?</h2>
+						<p class="fragment">Slick, yet again...</p>
+				  	<div class="layout--2-col fragment">
+				  		<div>
+				  			<ul>
+				  				<li>Fade mode available</li>
+				  				<li>Modify pager with <em>customPaging</em> variable</li>
+				  			</ul>
+				  			<p><small>Learn more: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></small></p>
+				  		</div>
+				  		<div>
+							  <div data-markdown>
+<script type="text/template">
+```js
+$('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+```
+</script>
+							  </div>
+							</div>
+						</div>
+						<aside class="notes">
+							- What library
+							- But wait… slick is for slideshows right?
+							- But how different are they really?
+							- Instead of a dot pager along the bottom, we have a title pager along the top.
+							- Instead of sliding right to left, we fade in and out.
+							- On top of us needing a more trad slideshow for mobile
+						</aside>
+
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#9b64a7" data-transition="fade">
+						<h2>The HTML Markup</h2>
+						<p>First, what does our content look like?</p>
+						<div data-markdown>
+<script type="text/template">
+```html
+<div class="tabs">
+  <h2 class="tabs__title">LiDAR for every application</h2>
+
+  <ul class="tabs__tabs">
+    <li class="tabs__tab-item">
+      <article>
+        <h4 class="article__title">Robotic & UAVs</h4>
+        <p class="article__body">...</p>
+        <img src="#" class="article__image" />
+      </article>
+    </li>
+    <li class="tabs__tab-item"><article>…</article></li>
+  </ul>
+
+</div>
+```
+</script>
+						</div>
+						<aside class="notes">
+							- Markup nerd rejoice...
+							- Similar, component tabs instead of slideshow.
+							- .tabs__tab-item is more complex.
+							- Content is decoupled component.
+						</aside>
+				  </section>
+
+					<section class="section--dark-background section--align-top" data-background="#9b64a7" data-transition="fade">
+						<h2>Create a Theme Library</h2>
+				  	<p class="col-title--code">slick.config.js</p>
+  					<div data-markdown>
+<script type="text/template">
+```js
+(function ($, Drupal, window, document) {
+
+  Drupal.behaviors.THEMESlickConfig = {
+    attach: function (context, settings) {
+
+     $(".js-slick-single-item-center").slick({ ... });
+
+     $(".js-slick-single-item-tabs").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        adaptiveHeight: true,
+        customPaging: function(slider, i) {
+          var title = $(slider.$slides[i]).find('.article__title').text();
+          return '<a>' + title + '</a>';
+        },
+        responsive: [
+          {
+            breakpoint: 720,
+            settings: {
+              customPaging: function(slider, i) {
+                return '<button type="button" data-role="none" role="button" aria-required="false" tabindex="' + i + '">' + (i + 1) + '</button>';
+              },
+            }
+          },
+        ]
+      });
+
+    }
+  };
+
+} (jQuery, Drupal, this, this.document));
+```
+</script>
+						</div>
+						<aside class="notes">
+							- Continue to use same library.
+							- Add new config for tabs.
+							- customPaging
+							- We contextually get the text from .article__title.
+							- Pager still at bottom. With a few CSS lines, we move this to the top.
+						</aside>
+					</section>
+
+					<section class="section--dark-background section--align-top" data-background="#9b64a7" data-transition="fade">
+						<h2>Bringing it together</h2>
+						<p>Again, our Twig template makes it happen...</p>
+						<p class="col-title--code">field--field-slideshow-slides.twig.html</p>
+						<div data-markdown>
+<script type="text/template">
+```html
+{% set classes = [
+  'tabs__tabs',
+  'js-slick-single-item-tabs'
+] %}
+
+{{ attach_library('THEME/slick') }}
+
+<ul {{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    <li{{ item.attributes }}>{{ item.content }}</li>
+  {% endfor %}
+</ul>
+```
+</script>
+						</div>
+						<aside class="notes">
+							- Bringing it together again
+							- Add our JS class, attach our library
+						</aside>
+					</section>
+
+				</section>
+
+
+			  <section data-transition="fade">
+
+					<section data-background="#f0f0f0" data-transition="fade">
+						<h5 style="margin-bottom:10px;">Drupal 8 Theming DIY</h5>
+						<h2 class="highlight-title highlight-title--green">References &amp; Links</h2>
+						<p>&nbsp;</p>
+					</section>
+
+					<section class="section--align-top section--text-align-center section--dark-background" data-background="#000" data-transition="fade">
+				  	<h3 style="margin: 0 0 5px 0;"><img src="lib/images/acquia-logo.svg" style="max-width:260px;position:relative;top:17px;"/> DEVELOPER CENTER</h3>
+				  	<div class="layout--2-col">
+				  		<div>
+				  			<p><small>Drupal 8 DIY: Creating a Slideshow with Theme Libraries and Slick</small></p>
+				  			<a href="https://dev.acquia.com/blog/drupal-8-diy-creating-a-slideshow-with-theme-libraries-and-slick/26/01/2017/17511"><img src="lib/images/scanse-slideshow-desktop.jpg"/></a>
+				  		</div>
+				  		<div>
+				  			<p><small>Drupal 8 DIY: Creating Content Tabs with Theme Libraries and Slick</small></p>
+				  			<a href="https://dev.acquia.com/blog/drupal-8-diy-creating-content-tabs-with-theme-libraries-and-slick/26/01/2017/17541"><img src="lib/images/scanse-tabs-desktop.jpg"/></a>
+				  		</div>
+				  	</div>
+				  	<p><strong><a href="http://theji.be/pnwds2017">theji.be/pnwds2017</a></strong></p>
+				  </section>
+					<section class="section--align-top" data-background="#f0f0f0" data-transition="fade">
+				  	<h2>References</h2>
+				  	<small>
+				  	<ul style="line-height:1.6em;">
+				  		<li>Basic: <a href="https://www.drupal.org/project/basic">https://www.drupal.org/project/basic</a></li>
+				  		<li>Slick: <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></li>
+				  	</ul>
+				  	<h3 style="margin:35px 0 15px 0;">Theme Structure &amp; Libraries</h3>
+				  	<ul style="line-height:1.6em;">
+				  		<li>CSS file organization: <a href="https://www.drupal.org/node/1887922">https://www.drupal.org/node/1887922</a></li>
+				  		<li>Adding CSS and JS to a D8 theme: <a href="https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme">https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme</a></li>
+				  		<li>Drupal 8 Theming: Defining file organization with SMACSS: <a href="https://thejibe.com/articles/drupal-8-theming-defining-file-organization-smacss">https://thejibe.com/articles/drupal-8-theming-defining-file-organization-smacss</a></li>
+				  		<li>Drupal 8 Theming: How to use theme libraries: <a href="https://thejibe.com/articles/drupal-8-theming-how-use-theme-libraries">https://thejibe.com/articles/drupal-8-theming-how-use-theme-libraries</a></li>
+				  	</ul>
+	  			  </small>
+  		  	</section>
+			  </section>
+
 			</div>
+
+			<footer class="footer--branded">
+				<div class="footer__container">
+					<img class="footer__logo" src="lib/images/the-jibe.png"/>
+					<span class="footer__content">
+						Drupal 8 Theming DIY&nbsp;&nbsp;//&nbsp;&nbsp;<i class="icon icon--twitter"></i> @leahamwagner&nbsp;&nbsp;//&nbsp;&nbsp;<i class="icon icon--drupal"></i> leahtard
+					</span>
+		  	</div>
+		  </footer>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
